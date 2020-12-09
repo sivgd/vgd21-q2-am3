@@ -27,7 +27,7 @@ public class EnemyDamageTrigger : MonoBehaviour
 
     public void HealthMax()
     {
-        health += 3;
+        health += 6;
     }
 
 
