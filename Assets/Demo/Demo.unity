@@ -1493,6 +1493,7 @@ MonoBehaviour:
   FirePoint: {fileID: 1636526552}
   SnowballPrefab: {fileID: 8561982197184073507, guid: d3b36c94de9faa64a9e599919ba2974b,
     type: 3}
+  cooldownTime: 2
 --- !u!50 &2132459861 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,

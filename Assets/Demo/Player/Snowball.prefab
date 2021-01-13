@@ -133,3 +133,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 8561982197184073508}
+  damage: 50
+  cooldownTime: 2
