@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
+    public float cooldownTime = 2;
+    private float nextFireTime = 0;
     float mx;
     public float speed = 10f;
     public float dashDistance = 15f;
@@ -22,6 +24,23 @@ public class Dash : MonoBehaviour
 
     void Update()
     {
+        if (Time.time > nextFireTime)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                nextFireTime = Time.time + cooldownTime;
+            }
+        }
+
+        if (Time.time > nextFireTime)
+        {
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                nextFireTime = Time.time + cooldownTime;
+            }
+        }
+
+
         if (!isDashing)
             rb.velocity = new Vector2(mx * speed, rb.velocity.y);
 
