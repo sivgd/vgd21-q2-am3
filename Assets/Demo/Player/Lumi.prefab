@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7296229435188270195}
   - component: {fileID: 7296229435188270194}
   - component: {fileID: 7296229435188270158}
+  - component: {fileID: 8082152424188502998}
   - component: {fileID: 7296229435188270159}
-  - component: {fileID: 7296229435188270152}
   m_Layer: 0
   m_Name: Lumi
   m_TagString: Untagged
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 5.5
   JumpForce: 7.5
+  Turned: 1
 --- !u!50 &7296229435188270194
 Rigidbody2D:
   serializedVersion: 4
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_Offset: {x: -2.0873027, y: -0.17682934}
   m_SpriteTilingProperty:
     border: {x: 0.59999996, y: 0, z: 4.7, w: 0.19999999}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.25, y: 0.5}
     oldSize: {x: 8.95, y: 6.71}
     newSize: {x: 8.95, y: 6.71}
     adaptiveTilingThreshold: 0.5
@@ -145,6 +146,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4335423, y: 5.952162}
   m_EdgeRadius: 0
+--- !u!114 &8082152424188502998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296229435188270193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fe494403d69a7429a57988d9029c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 0
+  startDashTime: 0
 --- !u!60 &7296229435188270159
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +176,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.59999996, y: 0, z: 4.7, w: 0.19999999}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.25, y: 0.5}
     oldSize: {x: 8.95, y: 6.71}
     newSize: {x: 8.95, y: 6.71}
     adaptiveTilingThreshold: 0.5
@@ -174,17 +189,3 @@ PolygonCollider2D:
       - {x: -3.845, y: 3.0149999}
       - {x: -0.345, y: 3.105}
       - {x: -0.345, y: -3.225}
---- !u!114 &7296229435188270152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7296229435188270193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642fbb2843247e944970f70427e5f567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 10000
-  startDashTime: 0.1

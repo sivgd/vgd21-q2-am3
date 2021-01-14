@@ -397,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
         type: 3}
       propertyPath: m_Mass
-      value: 1.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
         type: 3}
@@ -407,12 +407,52 @@ PrefabInstance:
     - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
         type: 3}
       propertyPath: m_GravityScale
-      value: 7.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
         type: 3}
       propertyPath: m_UseAutoMass
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296229435188270194, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7296229435188270195, guid: 15e81efa70e65a945bde46805f873648,
         type: 3}
@@ -429,9 +469,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 7296229435188270152, guid: 15e81efa70e65a945bde46805f873648, type: 3}
+    - target: {fileID: 8082152424188502998, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: startDashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082152424188502998, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082152424188502998, guid: 15e81efa70e65a945bde46805f873648,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15e81efa70e65a945bde46805f873648, type: 3}
 --- !u!1 &375644572
 GameObject:
@@ -1528,11 +1581,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 2
   speed: 0
-  dashDistance: 1
+  dashDistance: 50
   rb: {fileID: 2132459861}
   groundlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   feet: {fileID: 2132459864}
 --- !u!114 &2132459859
 MonoBehaviour:
@@ -1580,5 +1633,5 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  rb: {fileID: 2132459861}
+  rb: {fileID: 0}
   feet: {fileID: 2068546889}

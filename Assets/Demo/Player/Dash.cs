@@ -24,21 +24,7 @@ public class Dash : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > nextFireTime)
-        {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                nextFireTime = Time.time + cooldownTime;
-            }
-        }
-
-        if (Time.time > nextFireTime)
-        {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                nextFireTime = Time.time + cooldownTime;
-            }
-        }
+        
 
 
         if (!isDashing)
