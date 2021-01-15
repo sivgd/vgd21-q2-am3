@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
@@ -1584,4 +1582,4 @@ MonoBehaviour:
     m_Bits: 256
   rb: {fileID: 2132459861}
   feet: {fileID: 2068546889}
->>>>>>> parent of c47ac08... Update Demo.unity, Dash.cs, and 7 more files...
+
