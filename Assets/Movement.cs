@@ -6,30 +6,13 @@ public class Movement : MonoBehaviour
     public float jumpPower = 15f;
     public int extraJumps = 1;
     [SerializeField] LayerMask groundLayer;
-    
+    [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform feet;
 
     int jumpCount = 0;
     bool isGrounded;
     float mx;
     float jumpCoolDown;
-
-    public float thrust = 1.0f;
-    public Rigidbody rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    void FixedUpdate()
-    {
-        rb.AddForce(transform.forward * thrust);
-    }
-
-
-
-
 
     private void Update()
     {
@@ -40,7 +23,7 @@ public class Movement : MonoBehaviour
         }
         CheckGrounded();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         rb.velocity = new Vector2(mx * speed, rb.velocity.y);
     }
