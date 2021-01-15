@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class EnemyDamageTrigger : MonoBehaviour
 {
 
-    public int health;
-    public Slider healthBar;
     private Rigidbody2D rb2;
     public GameObject spawnpoint;
     public GameObject Player;
+    public HealthBar script2;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,20 +21,20 @@ public class EnemyDamageTrigger : MonoBehaviour
 
     public void TakeDamage()
     {
-        health -= 1;
+        script2.health -= 1;
     }
 
     public void HealthMax()
     {
-        health += 3;
+        script2.health += 3;
     }
 
 
     void Update()
     {
-        healthBar.value = health;
+        script2.slider.value = script2.health;
         
-        if (health == 0)
+        if (script2.health == 0)
         {
             rb2 = Player.GetComponent<Rigidbody2D>();
             rb2.velocity = new Vector2(0, 0);

@@ -543,6 +543,11 @@ PrefabInstance:
       propertyPath: health
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4922719484430973194, guid: 9c425e76cc325a344956360005166128,
+        type: 3}
+      propertyPath: script2
+      value: 
+      objectReference: {fileID: 1223428185}
     - target: {fileID: 4922719484430973195, guid: 9c425e76cc325a344956360005166128,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -747,6 +752,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 2132459857}
+    - target: {fileID: 4922719484430973194, guid: 9c425e76cc325a344956360005166128,
+        type: 3}
+      propertyPath: script2
+      value: 
+      objectReference: {fileID: 1223428185}
     - target: {fileID: 4922719484430973195, guid: 9c425e76cc325a344956360005166128,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -934,6 +944,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454545c4a17fa674ba9f06fda5693b54, type: 3}
+--- !u!114 &1223428185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 526867458270229379, guid: ea0e88938cd1898419d391b74d68deee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1892729559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa1b14ba461ee43a83cb9a98ec68f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311422475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6418280045945844163, guid: 454545c4a17fa674ba9f06fda5693b54,
@@ -1430,6 +1452,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 526867458270229376, guid: ea0e88938cd1898419d391b74d68deee,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 237
+      objectReference: {fileID: 0}
     - target: {fileID: 526867458270229377, guid: ea0e88938cd1898419d391b74d68deee,
         type: 3}
       propertyPath: m_IsActive
@@ -1582,4 +1609,3 @@ MonoBehaviour:
     m_Bits: 256
   rb: {fileID: 2132459861}
   feet: {fileID: 2068546889}
-

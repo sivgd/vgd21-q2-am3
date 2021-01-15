@@ -8,15 +8,16 @@ public class HealthBar : MonoBehaviour
 
 	public Slider slider;
 	public Image fill;
+	public int health;
 
-	public void SetMaxHealth(int health)
+	public void SetMaxHealth()
 	{
 		slider.maxValue = health;
 		slider.value = health;
 
 	}
 
-	public void SetHealth(int health)
+	public void SetHealth()
 	{
 		slider.value = health;
 	}
@@ -25,7 +26,7 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-		
+		SetHealth();
 
-    }
+	}
 }
