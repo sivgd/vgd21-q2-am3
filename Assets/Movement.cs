@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Transform feet;
+    public bool Turned = true;
 
     int jumpCount = 0;
     bool isGrounded;
@@ -22,10 +23,30 @@ public class Movement : MonoBehaviour
             Jump();
         }
         CheckGrounded();
+
+
+        //this stuff rotates the character upon turning. need it for the projectiles. Connor.
+        if (Input.GetAxis("Horizontal") > 0 && !Turned)
+        {
+            Flip();
+        }
+
+        if (Input.GetAxis("Horizontal") < 0 && Turned)
+        {
+            Flip();
+        }
     }
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+    }
+    // Flip is a script used for projectiles. Connor. 
+    private void Flip()
+    {
+        Turned = !Turned;
+
+        transform.Rotate(0f, 180f, 0f);
+
     }
 
     void Jump()
