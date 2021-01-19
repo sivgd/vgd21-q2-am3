@@ -1591,18 +1591,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132459857}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b65d8940b719e2249ab0dafac51a7c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 2
-  speed: 0
-  dashDistance: 1
-  rb: {fileID: 2132459861}
+  speed: 1
+  dashDistance: 40
   groundlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   feet: {fileID: 2132459864}
 --- !u!114 &2132459859
 MonoBehaviour:
