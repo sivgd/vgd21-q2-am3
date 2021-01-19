@@ -15,6 +15,10 @@ public class Movement : MonoBehaviour
     float mx;
     float jumpCoolDown;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         mx = Input.GetAxis("Horizontal");
@@ -38,7 +42,12 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+        if (GameManager.globalisdashing == false)
+        {
+            rb.gravityScale = 7.5f;
+
+            rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+        }
     }
     // Flip is a script used for projectiles. Connor. 
     private void Flip()
