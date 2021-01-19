@@ -12,13 +12,13 @@ public class Dash : MonoBehaviour
     bool isDashing;
     float doubleTapTime;
     KeyCode lastKeyCode;
-    [SerializeField] Rigidbody2D rb;
+    private Rigidbody2D rb;
     [SerializeField] LayerMask groundlayer;
     [SerializeField] Transform feet;
 
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
@@ -39,8 +39,9 @@ public class Dash : MonoBehaviour
                 nextFireTime = Time.time + cooldownTime;
             }
         }
-
-
+        Debug.Log(nextFireTime + " " + Time.time);
+       // if (Time.time < nextFireTime) return;
+        //Debug.Log("ok");
         if (!isDashing)
             rb.velocity = new Vector2(mx * speed, rb.velocity.y);
 
@@ -50,6 +51,7 @@ public class Dash : MonoBehaviour
         {
             if (doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
             {
+               
                 StartCoroutine(Dash(-1f));
             }
             else
@@ -65,7 +67,8 @@ public class Dash : MonoBehaviour
             {
                 if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
                 {
-                    StartCoroutine(Dash(1f));
+                    
+                        StartCoroutine(Dash(1f));
                 }
                 else
                 {
@@ -79,13 +82,20 @@ public class Dash : MonoBehaviour
         IEnumerator Dash(float direction)
         {
             isDashing = true;
+            GameManager.globalisdashing = true;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
-            rb.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
-            float gravity = rb.gravityScale;
+            float tmpvx = rb.velocity.x;
+           // Debug.Log(dashDistance * direction);
+
+            rb.velocity += new Vector2(dashDistance * direction, 0f);
+        //rb.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+        float gravity = rb.gravityScale;
             rb.gravityScale = 0f;
             yield return new WaitForSeconds(0.4f);
             isDashing = false;
+            GameManager.globalisdashing = false;
             rb.gravityScale = gravity;
+            rb.velocity = new Vector2(tmpvx, 0);
 
         }
     }
