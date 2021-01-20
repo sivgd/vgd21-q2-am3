@@ -29,14 +29,14 @@ public class Dash : MonoBehaviour
     {
         if (cooldown == 0 && isDashing == false && Input.GetKeyDown(KeyCode.A) && doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
         {
-            StartCoroutine(Dash(-1f));
+            StartCoroutine(Dash(-5f));
             //Debug.Log("hi");
 
         }
 
         if (cooldown == 0 && isDashing == false && Input.GetKeyDown(KeyCode.D) && doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
         {
-            StartCoroutine(Dash(1f));
+            StartCoroutine(Dash(5f));
             //Debug.Log("hi");
 
         }
