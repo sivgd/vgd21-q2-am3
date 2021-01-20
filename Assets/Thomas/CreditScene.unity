@@ -1233,7 +1233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &568299051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &580958053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3445,7 +3445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &1284884590
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3786,7 +3786,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &1472130179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4124,7 +4124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &1670115875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4252,7 +4252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back To game
+  m_Text: Back to menu
 --- !u!222 &1876905908
 CanvasRenderer:
   m_ObjectHideFlags: 0
