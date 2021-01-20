@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    public float cooldownTime = 2;
-    private float nextFireTime = 0;
+    //public float cooldownTime = 2;
+    //private float nextFireTime = 0;
     float mx;
+    private int cooldown;
+    public int maxCooldown;
     public float speed = 10f;
     public float dashDistance = 15f;
     bool isDashing;
@@ -19,27 +21,31 @@ public class Dash : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isDashing = false;
     }
 
 
     void Update()
     {
-        if (Time.time > nextFireTime)
+        if (cooldown == 0 && isDashing == false && Input.GetKeyDown(KeyCode.A) && doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                nextFireTime = Time.time + cooldownTime;
-            }
+            StartCoroutine(Dash(-1f));
+            //Debug.Log("hi");
+
         }
 
-        if (Time.time > nextFireTime)
+        if (cooldown == 0 && isDashing == false && Input.GetKeyDown(KeyCode.D) && doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                nextFireTime = Time.time + cooldownTime;
-            }
+            StartCoroutine(Dash(1f));
+            //Debug.Log("hi");
+
         }
-        Debug.Log(nextFireTime + " " + Time.time);
+
+
+    
+      
+
+    
        // if (Time.time < nextFireTime) return;
         //Debug.Log("ok");
         if (!isDashing)
@@ -49,7 +55,7 @@ public class Dash : MonoBehaviour
         // Left
         if (Input.GetKeyDown(KeyCode.A))
         {
-            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.A)
+            if (doubleTapTime > Time.time && lastKeyCode == KeyCode.A && isDashing == false)
             {
                
                 StartCoroutine(Dash(-1f));
@@ -65,7 +71,7 @@ public class Dash : MonoBehaviour
             // Right
             if (Input.GetKeyDown(KeyCode.D))
             {
-                if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D)
+                if (doubleTapTime > Time.time && lastKeyCode == KeyCode.D && isDashing == false)
                 {
                     
                         StartCoroutine(Dash(1f));
@@ -91,11 +97,27 @@ public class Dash : MonoBehaviour
         //rb.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
         float gravity = rb.gravityScale;
             rb.gravityScale = 0f;
+            Debug.Log("hi");
             yield return new WaitForSeconds(0.4f);
-            isDashing = false;
+            //airdash functions
+            cooldown = maxCooldown;
+          
+
+
+
+
             GameManager.globalisdashing = false;
             rb.gravityScale = gravity;
             rb.velocity = new Vector2(tmpvx, 0);
+
+            while (cooldown != 0)
+            {
+
+                yield return new WaitForSeconds(1f);
+                cooldown--;
+
+            }
+            isDashing = false;
 
         }
     }

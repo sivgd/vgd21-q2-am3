@@ -2317,7 +2317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65d8940b719e2249ab0dafac51a7c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 2
+  maxCooldown: 1
   speed: 1
   dashDistance: 40
   groundlayer:
