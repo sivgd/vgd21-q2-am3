@@ -11,7 +11,7 @@ public class scenechanger : MonoBehaviour
         if (collision.tag == "Player")
         {
             Debug.Log("Switch scene");
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("CreditScene");
         }
     }
 
