@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Thomas/CreditScene.unity
     guid: 93460896afa28154fb10e93d42a9b428
+  - enabled: 1
+    path: Assets/Thomas/Level2.unity
+    guid: cb479ab4cabcbc74fa99744f179cb07c
   m_configObjects: {}
