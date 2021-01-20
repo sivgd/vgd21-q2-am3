@@ -7,6 +7,7 @@ public class Dash : MonoBehaviour
     //public float cooldownTime = 2;
     //private float nextFireTime = 0;
     float mx;
+    private Animator anim;
     private int cooldown;
     public int maxCooldown;
     public float speed = 10f;
