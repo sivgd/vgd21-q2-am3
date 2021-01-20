@@ -2319,7 +2319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCooldown: 1
   speed: 1
-  dashDistance: 40
+  dashDistance: 37
   groundlayer:
     serializedVersion: 2
     m_Bits: 256
