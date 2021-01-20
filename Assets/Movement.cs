@@ -44,6 +44,7 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        anim.SetFloat("walkspeed", Mathf.Abs(rb.velocity.x));
         if (GameManager.globalisdashing == false)
         {
             rb.gravityScale = 7.5f;
