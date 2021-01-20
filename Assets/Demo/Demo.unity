@@ -2797,6 +2797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &1090402755
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2920,6 +2921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &1152340785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3565,6 +3567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &1300380090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3860,6 +3863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &1609636376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4786,6 +4790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 1223428185}
 --- !u!61 &1911425586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4980,6 +4985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &2001627237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5103,6 +5109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpoint: {fileID: 1311422475}
   mainPlayer: {fileID: 7296229435296989924}
+  script2: {fileID: 0}
 --- !u!212 &2002339725
 SpriteRenderer:
   m_ObjectHideFlags: 0
