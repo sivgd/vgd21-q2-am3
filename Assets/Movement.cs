@@ -3,6 +3,7 @@
 public class Movement : MonoBehaviour
 {
     public float speed = 10f;
+    private Animator anim;
     public float jumpPower = 15f;
     public int extraJumps = 1;
     [SerializeField] LayerMask groundLayer;
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -47,6 +49,7 @@ public class Movement : MonoBehaviour
             rb.gravityScale = 7.5f;
 
             rb.velocity = new Vector2(mx * speed, rb.velocity.y);
+            anim.Play("walkcycle2");
         }
     }
     // Flip is a script used for projectiles. Connor. 
