@@ -14,7 +14,13 @@ public class script : MonoBehaviour
     {
         Application.Quit();
     }
-    
+    public void CreditScene()
+    {
+        SceneManager.LoadScene("CreditScene");
+
+    }
+
+
 }
 
 
